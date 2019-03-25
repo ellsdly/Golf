@@ -4,44 +4,35 @@
 		<meta charset="UTF-8">
 		<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
 		<script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v3.3.0/dist/aframe-physics-system.min.js"></script>
-    <script src="https://unpkg.com/three.texttexture@18.8.6/THREE.TextTexture.js"></script>
+		<script src="https://unpkg.com/three.texttexture@18.8.6/THREE.TextTexture.js"></script>
 		<script src="https://antoniohof.github.io/aframe-text-texture-component/dist/aframe-text-texture-component.min.js"></script>
 	</head>
 	<body>
-		<a-scene>
-
-
-			<a-camera camera look-controls position="0 0 0"></a-camera>
-<!--			<a-sky src="sky.jpg"></a-sky> -->
+		<a-scene physics="friction: 0.1">
+			<a-entity light="type: ambient; color: #FFF; intensity: 0.9" position="0 10 0"></a-entity>
+			<a-light type="point" intentsity="0.9"></a-light>
+			<!--<a-sky src="sky.jpg"></a-sky>-->
+			<a-entity camera look-controls wasd-controls position="0 1.6 0"></a-entity>
 			<a-plane static-body rotation="-90 0 0" height="100" width="100" color="#567d46"></a-plane>
-      
-			<a-entity id="rada" static-body position="0 0 -4">
-				<a-box position="0 0 0" height="0.4" width="3" depth="10" color="#1e6b00" ></a-box>
-				<a-box position="1.45 0.25 0" height="0.1" width="0.1" depth="10"></a-box>
-				<a-box position="-1.45 0.25 0" height="0.1" width="0.1" depth="10"></a-box>
-				<a-box rotation="0 90 0" position="0 0.25 4.95" height="0.1" width="0.1" depth="3"></a-box>
-				<a-box rotation="0 90 0" position="0 0.25 -4.95" height="0.1" width="0.1" depth="3"></a-box>
-				<a-cylinder position="0 0.2 -4" height="0.01" radius="0.1" color="#000"></a-cylinder>
+
+			<a-entity vive-controls="hand: left"></a-entity>
+			<a-entity vive-controls="hand: right"></a-entity>
+			<a-entity id="" position="0 0 -4">
+				<a-box id="rada" position="0 0 0" static-body height="0.4" width="3" depth="10" color="#1e6b00" ></a-box>
+				<a-box class="aaris" position="1.45 0.25 0" static-body height="0.1" width="0.1" depth="10"></a-box>
+				<a-box class="aaris" position="-1.45 0.25 0" static-body height="0.1" width="0.1" depth="10"></a-box>
+				<a-box class="aaris" rotation="0 90 0" static-body position="0 0.25 4.95" height="0.1" width="0.1" depth="3"></a-box>
+				<a-box class="aaris" rotation="0 90 0" static-body position="0 0.25 -4.95" height="0.1" width="0.1" depth="3"></a-box>
+				<a-cylinder id="auk" position="0 0.2 -4"static-body  height="0.01" radius="0.1" color="#000"></a-cylinder>
 			</a-entity>
-      
-      
-     <a-entity light="type: ambient; color: #BBB"></a-entity>
-      
-<a-entity light="type: directional; color: #FFF; intensity: 0" position="-0.5 1 1"></a-entity>
-      
 			<a-entity id="kepp"  position="0 4 -4">
 				<a-cylinder constraint="target: #pea" id="varras" dynamic-body position="0 0 0" radius="0.03"></a-cylinder>
-				<a-box constraint="target: #varras" id="pea" dynamic-body position="-0.05 -0.6 0" height="0.1" width="0.2" depth="0.1" color="darkorange"></a-box>
+				<a-box constraint="target: #varras; collideConnected: false" id="pea" dynamic-body position="-0.05 -0.5 0" height="0.1" width="0.2" depth="0.1" color="darkorange"></a-box>
 			</a-entity>
-      
-			<a-entity id="pall" dynamic-body position="0 10 -1">
+			<a-entity id="pall" dynamic-body="linear-damping: 0.5" position="0 1 -4">
 				<a-sphere radius="0.05"></a-sphere>
 			</a-entity>
-      
-      <!-- tahvel -->
-      <!-- value="Now Interactable" geometry="primitive:plane" tuleb panna teksti div sisse vms-->
-      
-      <a-box material="https://cdn.glitch.com/2d91fb99-e241-440b-aafc-bd2e3a786077%2Ftexture.jpg?1553502721207" position="-7.30 4 -2.90" rotation="0 125 0" depth="5" height="3" width="0.4"></a-box>
+			<a-box material="src: url(https://cdn.glitch.com/2d91fb99-e241-440b-aafc-bd2e3a786077%2Ftexture.jpg?1553502721207)"  position="-7.30 4 -2.90" rotation="0 125 0" depth="5" height="3" width="0.4"></a-box>
                                                                                                           
     <a-entity text-texture="text: REEGLID
 Löökide arv ei loe.
@@ -50,9 +41,5 @@ ei ole võimalik sooritada siis palli
 liigutatakse 10cm võrra äärest eemale.
 Kui pall lüüakse rajalt välja, peab
 rada algusest alustama.; scale: 0.3" position="-7.10 4 -2.60" rotation="0 35 0"> </a-entity>
-                                                                                                       
-      <!-- POSITION JA ASJAD SIIS PAIKA KUI ON TÄPITÄHED SAADUD SISSE -->
-      
-		</a-scene>
 	</body>
 </html>
