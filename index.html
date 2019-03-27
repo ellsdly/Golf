@@ -71,13 +71,14 @@
 				</a-circle>
 			</a-entity>
 			<a-entity position="0 0 -4" id="Tuulik"> 
-      <a-cone height="3" radius-top="0.2" radius-bottom="1.5" color="#f4c242"></a-cone>
-        <a-cylinder position="0 1.2 0.5" height="0.5" radius="0.04" rotation="90 0 0" color="#5b4200"></a-cylinder>
-        <a-cylinder position="0 1.2 0.8" rotation="90 0 0" radius="0.1" height="0.1" color="red"></a-cylinder>
-        <a-cone position="0 1.6 0" radius-top="0" radius-bottom="0.5" height="0.5" color="#5b4200"></a-cone>
-        <a-box position="0 1.2 0.8" height="0.2" width="1.5" depth="0.01" rotation="0 0 -45"color="#5b4200"></a-box>
-        <a-box position="0 1.2 0.8" height="0.2" width="1.5" depth="0.01" rotation="0 0 45" color="#5b4200"></a-box>
-      </a-entity>
+      <a-cone static-body height="3" radius-top="0.2" radius-bottom="1.5" color="#f4c242"></a-cone>
+        <a-cylinder static-body position="0 1.2 0.5" height="0.5" radius="0.04" rotation="90 0 0" color="#5b4200"></a-cylinder>
+        <a-cylinder static-body position="0 1.2 0.8" rotation="90 0 0" radius="0.1" height="0.1" color="red" ></a-cylinder>
+        <a-cone static-body position="0 1.6 0" radius-top="0" radius-bottom="0.5" height="0.5" color="#5b4200"></a-cone>
+        <a-entity id="tuuliku tiivad">
+        <a-box static-body position="0 1.2 0.8" height="0.2" width="1.5" depth="0.01" rotation="0 0 -45"color="#5b4200" animation="property: rotation; to: 0 0 360"></a-box>
+        <a-box static-body position="0 1.2 0.8" height="0.2" width="1.5" depth="0.01" rotation="0 0 45" color="#5b4200"></a-box></a-entity>
+      </a-entity>      
 			
 		</a-scene>
 	</body>
