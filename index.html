@@ -27,14 +27,14 @@
 		<a-scene physics="friction: 0.1">
 			<a-entity light="type: ambient; color: #FFF; intensity: 0.9" position="0 10 0"></a-entity>
 			<a-light type="point" intentsity="0.9"></a-light>
-			<!-- <a-sky src="sky.jpg"></a-sky> -->
-      <a-sky color="black"></a-sky>
+			<a-sky src="sky.jpg"></a-sky>
+      
 			<a-entity camera look-controls wasd-controls position="0 1.6 0"></a-entity>
 			<a-plane static-body rotation="-90 0 0" height="100" width="100" color="#567d46"></a-plane>
 
-			<a-entity vive-controls="hand: left"></a-entity>
-			<a-entity vive-controls="hand: right"></a-entity>
-			<a-entity id="" position="0 0 -4">
+			<a-entity id="vasakcontrol" vive-controls="hand: left"></a-entity>
+			<a-entity id="paremcontrol" vive-controls="hand: right"></a-entity>
+			<a-entity id="1. rada" position="0 0 -4">
 				<a-box id="rada" position="0 0 0" static-body height="0.4" width="3" depth="10" color="#1e6b00" ></a-box>
 				<a-box class="aaris" position="1.45 0.25 0" static-body height="0.1" width="0.1" depth="10"></a-box>
 				<a-box class="aaris" position="-1.45 0.25 0" static-body height="0.1" width="0.1" depth="10"></a-box>
@@ -49,7 +49,7 @@
 			<a-entity id="pall" dynamic-body="linear-damping: 0.5" position="0 1 -4">
 				<a-sphere radius="0.05"></a-sphere>
 			</a-entity>
-			<a-box material="boxtexture.jpg" position="-7.30 4 -2.90" rotation="0 125 0" depth="5" height="3" width="0.4"></a-box>
+			<a-box id="tahvel" src="boxtexture.jpg" position="-7.30 4 -2.90" rotation="0 125 0" depth="5" height="3" width="0.4"></a-box>
 			<a-entity text-texture="text: REEGLID
 Löökide arv ei loe.
 Kui pall lüüakse raja äärde ja lööki
@@ -57,7 +57,7 @@ ei ole võimalik sooritada siis palli
 liigutatakse 10cm võrra äärest eemale.
 Kui pall lüüakse rajalt välja, peab
 rada algusest alustama.; scale: 0.3" position="-7.10 4 -2.60" rotation="0 35 0"> </a-entity>
-			<a-entity position="0 4 -10" id="clock">
+			<a-entity position="0 4 -10" id="kell">
 				<a-circle src="koolikell.png" radius="2" segment="200">
 					<a-entity id="seconds" line="start: 0, 0, 0.0005; end: 0 0.625 0.0005; color: black" scale="2 2 2"></a-entity>
 					<a-entity id="minutes" line="start: 0, 0, 0.0005; end: 0 0.5 0.0005; color: black" scale="2 2 2"></a-entity>
