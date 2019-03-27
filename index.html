@@ -21,7 +21,6 @@
 				document.getElementById('hours').object3D.rotation.z = - THREE.Math.degToRad(30)*h;
 				var t = setTimeout(startTime, 1000);
 			}
-			startTime();
 	  </script>
 	</head>
 	<body>
@@ -57,11 +56,12 @@ ei ole võimalik sooritada siis palli
 liigutatakse 10cm võrra äärest eemale.
 Kui pall lüüakse rajalt välja, peab
 rada algusest alustama.; scale: 0.3" position="-7.10 4 -2.60" rotation="0 35 0"> </a-entity>
-			<a-entity position="0 4 -20" id="clock">
+			<a-entity position="0 4 -10" id="clock">
 				<a-circle src="https://raw.githack.com/karanganesan/a-clock/master/clock-face-template-png-12.png" radius="1" segment="200">
 					<a-entity id="seconds" line="start: 0, 0, 0.0005; end: 0 0.625 0.0005; color: black" scale="1 1 1"></a-entity>
 					<a-entity id="minutes" line="start: 0, 0, 0.0005; end: 0 0.5 0.0005; color: black" scale="1 1 1"></a-entity>
 					<a-entity id="hours" line="start: 0, 0, 0.0005; end: 0 0.35 0.0005; color: black" scale="1 1 1"></a-entity>
+			<script>startTime();</script>
 				</a-circle>
 			</a-entity>
 		</a-scene>
