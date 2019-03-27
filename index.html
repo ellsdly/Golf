@@ -25,12 +25,12 @@
 	</head>
 	<body>
 		<a-scene physics="friction: 0.1; debug: true">
-			
-			<a-assets>
-    <audio id="heli" src="outside.wav" preload="auto"></audio>
-  </a-assets>
+			<a-entity id="sound" sound="src: #heli" loop="auto" volume="20">
+				<a-assets>
+    					<audio id="heli" src="outside.wav" preload="auto"></audio>
+  				</a-assets>
 
-  <a-entity id="sound" sound="src: #heli" loop="auto" volume="20"></a-entity>
+  			</a-entity>
 
 			<a-entity light="type: ambient; color: #FFF; intensity: 0.9" position="0 10 0"></a-entity>
 			<a-light type="point" intentsity="0.9"></a-light>
