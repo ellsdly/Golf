@@ -26,11 +26,9 @@
 	</head>
 	<body>
 		<a-scene physics="friction: 0.1; debug: true">
-		<a-entity id="sound" sound="src: outside.wav; autoplay:true; loop:true; volume: 20;>
-  			</a-entity>
+			<a-entity id="sound" sound="src: outside.wav; autoplay:true; loop:true; volume: 20;"> </a-entity>
 
 			<a-entity light="type: ambient; color: #FFF; intensity: 0.9" position="0 10 0"></a-entity>
-			<a-light type="point" intentsity="0.9"></a-light>
 			<a-sky src="sky.jpg"></a-sky>
 			<a-entity id="cameraRig">
 				<a-entity id="camera" camera look-controls wasd-controls position="0 1.6 0"></a-entity>
