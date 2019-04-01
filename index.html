@@ -7,8 +7,8 @@
 		<script src="https://unpkg.com/three.texttexture@18.8.6/THREE.TextTexture.js"></script>
 		<script src="https://antoniohof.github.io/aframe-text-texture-component/dist/aframe-text-texture-component.min.js"></script>
 		<script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
-<!--		<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
-		<script src="https://unpkg.com/super-hands@3.0.0/dist/super-hands.min.js"></script>-->
+		<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
+		<script src="https://unpkg.com/super-hands@3.0.0/dist/super-hands.min.js"></script>
 		<script>
 			let temp = 0.5/60;
 			function startTime() {
@@ -34,8 +34,9 @@
 
 			<a-camera id="camera"></a-camera>
 			<a-entity position="0 1.6 0"id="right-hand" vive-controls="hand: right" ></a-entity>
-			<!--
+			
 			<a-plane id="ground" static-body rotation="-90 0 0" height="100" width="100" color="#567d46"></a-plane>
+			<!-- Rada -->
 			<a-entity id="" position="0 0 -4">
 				<a-box id="rada" position="0 0 0" static-body height="0.4" width="3" depth="10" color="#1e6b00" ></a-box>
 				<a-box class="aaris" position="1.45 0.25 0" static-body height="0.1" width="0.1" depth="10"></a-box>
@@ -53,7 +54,7 @@
 			<a-entity id="pall" grabbable draggable droppable dynamic-body="linear-damping: 0.5" position="0 1 -4">
 				<a-sphere radius="0.05"></a-sphere>
 			</a-entity>
-			
+			<!-- Reeglite tahvel -->
 			<a-box id="tahvel" src="boxtexture.jpg" position="-7.30 4 -2.90" rotation="0 125 0" depth="5" height="3" width="0.4"></a-box>
 			<a-entity text-texture="text: REEGLID
 * Löökide arv ei loe.
@@ -61,7 +62,9 @@
   ei ole võimalik sooritada siis palli
   liigutatakse 10cm võrra äärest eemale.
 * Kui pall lüüakse rajalt välja, peab
-  rada algusest alustama.; scale: 0.3" position="-7.10 4 -2.60" rotation="0 35 0"> </a-entity> -->
+  rada algusest alustama.; scale: 0.3" position="-7.10 4 -2.60" rotation="0 35 0"> </a-entity> 
+			
+			<!-- Kell -->
 			<a-entity id="kella tagus" position="0 4 -10.02"geometry="primitive: circle; radius: 2" material="side: double; src: marble.jpg"></a-entity>
 			<a-entity position="0 4 -10" id="kell">
 				<a-circle src="koolikell.png" radius="2" segment="200">
@@ -70,7 +73,8 @@
 					<a-entity id="hours" line="start: 0, 0, 0.0005; end: 0 0.35 0.0005; color: black" scale="2 2 2"></a-entity>
 					<script>startTime();</script>
 				</a-circle>
-		<!--	</a-entity>
+		<!-- Tuulik -->
+			</a-entity>
 			<a-entity position="0 0 -4" id="Tuulik"> 
 			<a-cone static-body height="3" radius-top="0.2" radius-bottom="1.5" color="#f4c242"></a-cone>
 			<a-cylinder static-body position="0 1.2 0.5" height="0.5" radius="0.04" rotation="90 0 0" color="#5b4200"></a-cylinder>
