@@ -46,12 +46,12 @@
 				<a-cylinder id="auk" position="0 0.2 -4"static-body  height="0.01" radius="0.1" color="#000"></a-cylinder>
 			</a-entity>
 			
-			<a-entity id="kepp" grabbable position="0 4 -4">
+			<a-entity id="kepp" grabbable position="0.5 2 0">
 				<a-cylinder constraint="target: #pea; collideConnected: false" id="varras" dynamic-body position="0 0 0" radius="0.03"></a-cylinder>
 				<a-box constraint="target: #varras; collideConnected: false" id="pea" dynamic-body position="-0.05 -0.5 0" height="0.1" width="0.2" depth="0.1" color="darkorange"></a-box>
 			</a-entity>
 			
-			<a-entity id="pall" dynamic-body="linear-damping: 0.5" position="0 1 -4">
+			<a-entity id="pall" dynamic-body="linear-damping: 0.5" position="-0.5 1 0">
 				<a-sphere radius="0.05"></a-sphere>
 			</a-entity>
 			
