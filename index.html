@@ -7,8 +7,6 @@
 		<script src="https://unpkg.com/three.texttexture@18.8.6/THREE.TextTexture.js"></script>
 		<script src="https://antoniohof.github.io/aframe-text-texture-component/dist/aframe-text-texture-component.min.js"></script>
 		<script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
-<!--		<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
-		<script src="https://unpkg.com/super-hands@3.0.0/dist/super-hands.min.js"></script>-->
 		<script>
 			let temp = 0.5/60;
 			function startTime() {
@@ -24,8 +22,8 @@
 				document.getElementById('hours').object3D.rotation.z = - THREE.Math.degToRad(30)*h;
 				var t = setTimeout(startTime, 1000);
 			}
-		</script>
-	</head>
+			</script>
+		</head>
 	<body>
 		<a-scene physics="friction: 0.1; debug: true">
 			<a-entity id="sound" sound="src: outside.wav; autoplay:true; loop:true; volume: 20;"> </a-entity>
