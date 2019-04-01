@@ -31,9 +31,10 @@
 			<a-entity id="sound" sound="src: outside.wav; autoplay:true; loop:true; volume: 20;"> </a-entity>
 			<a-entity light="type: ambient; color: #FFF; intensity: 0.9" position="0 10 0"></a-entity>
 			<a-sky src="sky.png"></a-sky>
-
-			<a-camera id="camera"></a-camera>
-			<a-entity id="right-hand" vive-controls="hand: right" ></a-entity>
+			<a-entity id="cameraRig">
+				<a-camera id="camera"></a-camera>
+				<a-entity id="right-hand" vive-controls="hand: right" ></a-entity>
+			<a-entity>
 			<a-plane id="ground" static-body rotation="-90 0 0" height="100" width="100" color="#567d46"></a-plane>
 			<a-entity id="" position="0 0 -4">
 				<a-box id="rada" position="0 0 0" static-body height="0.4" width="3" depth="10" color="#1e6b00" ></a-box>
