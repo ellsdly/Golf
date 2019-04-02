@@ -40,13 +40,14 @@
 					}
 				}
 			stopwatch.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
-			t=setTimeout(stopwatch, 1000);
+			t = setTimeout(stopwatch, 1000);
 			}
 		</script>
 	</head>
 	<body>
 		<a-scene physics="friction: 0.1; debug: true">
-			<a-entity id="stopwatch"position="0 0 -4" text-texture="text"></a-entity>
+			<a-text id="stopwatch" value="testõüöä" position="0 2 -2" font="Ubuntu-L-msdf.json"></a-text>
+			<script>stopwatch()</script>
 			<a-entity id="sound" sound="src: outside.wav; autoplay:true; loop:true; volume: 20;"> </a-entity>
 			<a-entity id="cameraRig">
 				<a-camera id="head"></a-camera>
