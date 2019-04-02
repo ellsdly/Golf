@@ -52,8 +52,6 @@
 				<a-entity sphere-collider="objects: a-entity" vive-controls="hand: right" super-hands teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity>
 			</a-entity>
 			<a-entity light="type: ambient; color: #FFF; intensity: 0.9" position="0 10 0"></a-entity>
-			<a-light type="point" intentsity="0.9"></a-light>
-			<a-sky src="sky.jpg"></a-sky>
 			<a-plane id="ground" static-body rotation="-90 0 0" height="100" width="100" color="#567d46"></a-plane>
 			<a-entity id="rada" position="0 0 -4">
 				<a-box id="rada" position="0 0 0" static-body height="0.4" width="3" depth="10" color="#1e6b00" ></a-box>
@@ -72,7 +70,7 @@
 			<a-entity id="pall" dynamic-body="linear-damping: 0.5" position="-0.5 1 0">
 				<a-sphere radius="0.05"></a-sphere>
 			</a-entity>
-			
+			<!-- Reeglite tahvel -->
 			<a-box id="tahvel" src="boxtexture.jpg" position="-7.30 4 -2.90" rotation="0 125 0" depth="5" height="3" width="0.4"></a-box>
 			<a-entity text-texture="text: REEGLID
 * Löökide arv ei loe.
@@ -80,15 +78,18 @@
   ei ole võimalik sooritada siis palli
   liigutatakse 10cm võrra äärest eemale.
 * Kui pall lüüakse rajalt välja, peab
-  rada algusest alustama.; scale: 0.3" position="-7.10 4 -2.60" rotation="0 35 0"> </a-entity>
+  rada algusest alustama.; scale: 0.3" position="-7.10 4 -2.60" rotation="0 35 0"> </a-entity> 
 			
-			<a-entity id="kell" position="0 4 -10">
+			<!-- Kell -->
+			<a-entity id="kella tagus" position="0 4 -10.02"geometry="primitive: circle; radius: 2" material="side: double; src: marble.jpg"></a-entity>
+			<a-entity position="0 4 -10" id="kell">
 				<a-circle src="koolikell.png" radius="2" segment="200">
 					<a-entity id="seconds" line="start: 0, 0, 0.0005; end: 0 0.625 0.0005; color: black" scale="2 2 2"></a-entity>
 					<a-entity id="minutes" line="start: 0, 0, 0.0005; end: 0 0.5 0.0005; color: black" scale="2 2 2"></a-entity>
 					<a-entity id="hours" line="start: 0, 0, 0.0005; end: 0 0.35 0.0005; color: black" scale="2 2 2"></a-entity>
 					<script>startTime();</script>
 				</a-circle>
+		<!-- Tuulik -->
 			</a-entity>
 			<a-entity id="Tuulik" position="0 0 -4"> 
 				<a-cone static-body height="3" radius-top="0.2" radius-bottom="1.5" color="#f4c242"></a-cone>
