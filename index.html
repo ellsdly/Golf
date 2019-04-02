@@ -46,7 +46,7 @@
 	</head>
 	<body>
 		<a-scene physics="friction: 0.1; debug: true">
-			<a-entity id="sound" sound="src: outside.wav; autoplay:true; loop:true; volume: 20;"> </a-entity>
+			<a-entity id="sound" sound="positionsal: false;src: outside.wav; autoplay:true; loop:true; volume: 20;"> </a-entity>
 			<a-entity id="cameraRig">
 				<a-camera id="head"></a-camera>
 				<a-entity sphere-collider="objects: a-entity" vive-controls="hand: right" super-hands teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity>
