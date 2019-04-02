@@ -24,6 +24,24 @@
 				document.getElementById('hours').object3D.rotation.z = - THREE.Math.degToRad(30)*h;
 				var t = setTimeout(startTime, 1000);
 			}
+
+			function stopwatch() {
+			var stopwatch = document.getElementById('stopwatch'),
+				seconds = 0, minutes = 0, hours = 0,
+				t;
+
+			seconds++;
+				if (seconds >= 60) {
+				seconds = 0;
+				minutes++;
+					if (minutes >= 60) {
+						minutes = 0;
+						hours++;
+					}
+				}
+			stopwatch.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+			t=setTimeout(stopwatch, 1000);
+			}
 		</script>
 	</head>
 	<body>
@@ -37,7 +55,7 @@
 			<a-light type="point" intentsity="0.9"></a-light>
 			<a-sky src="sky.jpg"></a-sky>
 			<a-plane id="ground" static-body rotation="-90 0 0" height="100" width="100" color="#567d46"></a-plane>
-			<a-entity id="" position="0 0 -4">
+			<a-entity id="rada" position="0 0 -4">
 				<a-box id="rada" position="0 0 0" static-body height="0.4" width="3" depth="10" color="#1e6b00" ></a-box>
 				<a-box class="aaris" position="1.45 0.25 0" static-body height="0.1" width="0.1" depth="10"></a-box>
 				<a-box class="aaris" position="-1.45 0.25 0" static-body height="0.1" width="0.1" depth="10"></a-box>
@@ -64,7 +82,7 @@
 * Kui pall lüüakse rajalt välja, peab
   rada algusest alustama.; scale: 0.3" position="-7.10 4 -2.60" rotation="0 35 0"> </a-entity>
 			
-			<a-entity position="0 4 -10" id="kell">
+			<a-entity id="kell" position="0 4 -10">
 				<a-circle src="koolikell.png" radius="2" segment="200">
 					<a-entity id="seconds" line="start: 0, 0, 0.0005; end: 0 0.625 0.0005; color: black" scale="2 2 2"></a-entity>
 					<a-entity id="minutes" line="start: 0, 0, 0.0005; end: 0 0.5 0.0005; color: black" scale="2 2 2"></a-entity>
@@ -72,7 +90,7 @@
 					<script>startTime();</script>
 				</a-circle>
 			</a-entity>
-			<a-entity position="0 0 -4" id="Tuulik"> 
+			<a-entity id="Tuulik" position="0 0 -4"> 
 				<a-cone static-body height="3" radius-top="0.2" radius-bottom="1.5" color="#f4c242"></a-cone>
 				<a-cylinder static-body position="0 1.2 0.5" height="0.5" radius="0.04" rotation="90 0 0" color="#5b4200"></a-cylinder>
 				<a-cylinder static-body position="0 1.2 0.8" rotation="90 0 0" radius="0.1" height="0.1" color="red" ></a-cylinder>
