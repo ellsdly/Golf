@@ -1,4 +1,4 @@
-<!doctype html>2
+<!doctype html>
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -46,8 +46,6 @@
 	</head>
 	<body>
 		<a-scene physics="friction: 0.1; debug: true">
-			<a-text id="stopwatch" value="testõüöä" position="0 2 -2" font="Ubuntu-L-msdf.json"></a-text>
-			<script>stopwatch()</script>
 			<a-entity id="sound" sound="src: outside.wav; autoplay:true; loop:true; volume: 20;"> </a-entity>
 			<a-entity id="cameraRig">
 				<a-camera id="head"></a-camera>
@@ -91,7 +89,7 @@
 					<a-entity id="hours" line="start: 0, 0, 0.0005; end: 0 0.35 0.0005; color: black" scale="2 2 2"></a-entity>
 					<script>startTime();</script>
 				</a-circle>
-		<!-- Tuulik -->
+			<!-- Tuulik -->
 			</a-entity>
 			<a-entity id="Tuulik" position="0 0 -4"> 
 				<a-cone static-body height="3" radius-top="0.2" radius-bottom="1.5" color="#f4c242"></a-cone>
@@ -104,7 +102,7 @@
 				</a-entity>
 			</a-entity> 
 			<!-- Rada number 2 -->
-			<a-entity id="2. Rada" position="10 0 0">
+			<a-entity id="2.Rada" position="10 0 0">
 				<a-box id="rada" position="0 0 0" static-body height="0.4" width="3" depth="10" color="#1e6b00" ></a-box>
 				<a-box id="rada" position="3.5 0 6.5" rotation="0 90 0"static-body height="0.4" width="3" depth="10" color="#1e6b00" ></a-box>
 				<a-box class="aaris" position="1.45 0.25 0" static-body height="0.1" width="0.1" depth="10"></a-box>
