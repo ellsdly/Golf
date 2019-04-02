@@ -1,0 +1,10 @@
+	<!-- Tuulik -->
+			</a-entity>
+			<a-entity position="0 0 -4" id="Tuulik"> 
+			<a-cylinder id="koonus" static-body height="3" radius-top="0.2" radius-bottom="1.5" color="#f4c242"></a-cylinder>
+			<a-cylinder id="jubin" dynamic-body constraint="target: #koonus; collideConnected: false" position="0 1.2 0.5" height="0.5" radius="0.04" rotation="90 0 0" color="#5b4200"></a-cylinder>
+			<a-cylinder id="asi" dynamic-body constraint="target: #jubin; collideConnected: false" position="0 1.2 0.8" rotation="90 0 0" radius="0.1" height="0.1" color="red" ></a-cylinder>
+			<a-cone static-body position="0 1.6 0" radius-top="0" radius-bottom="0.5" height="0.5" color="#5b4200"></a-cone>
+			<a-entity id="tuuliku tiivad">
+			<a-box id="tiib1"  position="0 0 0" height="0.2" width="1.5" depth="0.01" rotation="0 0 -45"color="#5b4200" animation="property: rotation; to: 0 0 360; loop: true;dur:10000"></a-box>
+			<a-box id="tiib2"  position="0 0 0" height="0.2" width="1.5" depth="0.01" rotation="0 0 45" color="#5b4200" animation="property: rotation; to: 0 0 360; loop: true;dur:10000"></a-box>
