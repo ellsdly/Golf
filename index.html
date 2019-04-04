@@ -45,7 +45,12 @@
 		</script>
 	</head>
 	<body>
-		<a-scene physics="friction: 0.1;">
+		<a-scene physics="debug: true; friction: 0.1;">
+			<a-mixin id="grabbable"
+				hoverable grabbable draggable
+				event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
+				event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
+				dynamic-body shadow></a-mixin>
 			<a-mixin id="touch"
 				physics-collider phase-shift
 				collision-filter="collisionForces: false"
@@ -78,7 +83,7 @@
 				<a-cylinder static-body position="0.8 0 1.5" radius="0.6" height="1" color="#ce0000" shadow></a-cylinder>
 			</a-entity>
 			
-			<a-entity id="kepp" grabbable position="0.5 2 0">
+			<a-entity id="kepp" mixin="grabbable" position="0.5 2 0">
 				<a-cylinder constraint="target: #pea; collideConnected: false" id="varras" dynamic-body position="0 0 0" radius="0.03"></a-cylinder>
 				<a-box constraint="target: #varras; collideConnected: false" id="pea" dynamic-body position="-0.05 -0.5 0" height="0.1" width="0.2" depth="0.1" color="darkorange"></a-box>
 			</a-entity>
