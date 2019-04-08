@@ -67,7 +67,8 @@
 					vive-controls="hand: right" 
 					teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head;"
 					oculus-touch-controls="hand: right"
-					windows-motion-controls="hand: right">
+					windows-motion-controls="hand: right"
+					geometry="primitive: cylinder; radius: 0.03">
 				</a-entity>
 				<a-entity id="lhand"
 					visible="true"
@@ -94,7 +95,7 @@
 				<a-sphere static-body position="-0.7 0 3" radius="0.7" color="#ce0000" shadow></a-sphere>
 				<a-cylinder static-body position="0.8 0 1.5" radius="0.6" height="1" color="#ce0000" shadow></a-cylinder>
 			</a-entity>
-				<a-entity id="kepp" position="">
+				<a-entity id="kepp" position="0.5 1 1">
 					<a-cylinder mixin="grabbable" constraint="target: #pea; collideConnected: false" id="varras" dynamic-body position="0 0 0" radius="0.03"></a-cylinder>
 					<a-box constraint="target: #varras; collideConnected: false" id="pea" dynamic-body position="-0.05 -0.5 0" height="0.1" width="0.2" depth="0.1" color="darkorange"></a-box>
 				</a-entity>
