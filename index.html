@@ -51,7 +51,6 @@
 				<a-mixin id="touch"
 					physics-collider phase-shift
 					collision-filter="collisionForces: false"
-					static-body="shape: sphere; sphereRadius: 0.02"
 					super-hands="colliderEvent: collisions;
 					colliderEventProperty: els;
 					colliderEndEvent: collisions;
@@ -71,6 +70,7 @@
 					windows-motion-controls="hand: right">
 				</a-entity>
 				<a-entity id="lhand"
+					visible="true"
 					mixin="touch" 
 					super-hands 
 					vive-controls="hand: left"
