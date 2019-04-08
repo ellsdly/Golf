@@ -41,7 +41,7 @@
 		</script>
 	</head>
 	<body>
-		<a-scene physics=" friction: 0.1; debug: true;">
+		<a-scene physics=" friction: 0.1; ">
 			<a-assets>
 				<a-mixin id="grabbable"
 					hoverable grabbable draggable
@@ -60,8 +60,8 @@
 				</a-mixin>
 			</a-assets>
 			<a-entity id="sound" sound="src: outside.wav; autoplay:true; loop:true; volume: 20;"> </a-entity>
-			<a-sky src=""></a-sky>
-			<a-entity id="cameraRig" position="0 0.6 -4">
+			<a-sky src="sky.png"></a-sky>
+			<a-entity id="cameraRig" position="0 0 0">
 				<a-camera id="head"></a-camera>
 				<a-entity id="rhand" 
 					mixin="touch" 
